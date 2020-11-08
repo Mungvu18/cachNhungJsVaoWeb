@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài đọc. Cách nhúng js vào trang web</h1>
+<p id="demo"></p>
+<!--có một số cách khác nhau để nhúng JS vào một trang web:-->
+<!--+ Sử dụng thẻ <script></script> bên trong Html-->
+<!--+ Sử dụng file js riêng biêt-->
+<!--+ viết mã js ngay trong thẻ html-->
+<!--1. Thẻ script: chúng ta có thể sử dụng thẻ script để nhúng js như sau:-->
+<script>
+    document.getElementById("demo").innerHTML= "my first js";
+</script>
+<!--Đoạn mã js trên sẽ được thực thi và nghi dòng chữ my firstjs vào trong thẻ có id là demo-->
+<!--2. Chúng ta có thể cài đặt thẻ script bên tròn thẻ head hoặc bất cứ vị trí nào mong muốn bên trong thẻ body
+Note: Các đoạn mã Js thường đặt ở cuối thẻ body nhằm tăng tốc độ hiển thị của trang web. Tại sao lại thế?
+vd sau đây, đoạn mã Js được ddawjrt lại trước thẻ đóng của thẻ body-->
+<h1>A web page</h1>
+<p id="demo1">A pragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+<script>
+    function myFunction() {
+        document.getElementById('demo1').innerHTML = "paragraph changed.";
+    }
+</script>
+<!--Note: trong ví dụ trên chúng ta có sử dụng khái niệm hàm function và sự kiện event sẽ được đề cập ở phần sau.-->
+<!--3.file js riêng biệt
+chúng ta cũng có thể viết mã js vào các file riếng biệt, sau đó nhúng
+vào trang html sử dụng thẻ script, các file js được lưu vs đuôi .js-->
+<!--chẳng hạn đây là file my js-->
+<!--function myFunction() {-->
+<!--document.getElementById("demo").innerHTML ="paragraph changed.";-->
+<!--}-->
+<!--chúng ta có thể nhúng file nayg vào trang html như sau:-->
+<!--<script src="myScript.js"></script>-->
+<!--Các ưu điểm của việc sử dụng các file js riêng biệt:-->
+<!--+ Tách rời mã JS và mã HTML khiến cho việc viết mã trở nên dễ dàng hơn, đễ bảo trì hơn, dễ đọc hơn.-->
+<!--+ các file JS này thườn được lưu trong bộ cache của trình duyệt, khiến cho việ tải tràn trở nên nhanh hơn-->
+<!--+ có thế tái sử dụng các file js nhiều lần cho các trang web khác nhau, thậm chí là nhiều website khác nhau.-->
+<!--4. viết mã ngay khi khai báo thẻ html
+trong vidu dưới đây, chúng ta sẽ viết mã HTMl ngay trong thuoovj tính onclick của thẻ button(onclik là một sự kiện
+chúng ta sẽ tìm hiểu về các sự kiện ở phần sau)-->
+<button onclick="alert('xin chào bạn')">check it</button>
+<!--Tip: Viết mã JS trực tiếp ở trong thẻ html không được khuyến khích và ít được dùng, lý do là vì sao?-->
+</body>
+</html>
